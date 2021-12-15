@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp">
+
+    <ImageView
+        android:id="@+id/image_slider_item"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/gradient_banner_image"
+        />
+
+    <TextView
+        android:id="@+id/txt_slider_item"
+        android:text="Movie Name"
+        android:textColor="@android:color/white"
+        android:textSize="21sp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"/>
+
+</RelativeLayout>

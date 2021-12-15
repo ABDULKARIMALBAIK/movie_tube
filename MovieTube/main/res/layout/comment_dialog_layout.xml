@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/colorPrimaryDark">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/edtComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="@android:color/white"
+        android:hint="Comment"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:textSize="28sp"
+        android:inputType="textPassword"
+        android:textCursorDrawable="@null"
+        android:layout_margin="8dp"
+        app:met_baseColor="@android:color/white"
+        app:met_floatingLabel="highlight"
+        app:met_primaryColor="@android:color/white"
+        app:met_singleLineEllipsis="true"
+        />
+
+</androidx.cardview.widget.CardView>

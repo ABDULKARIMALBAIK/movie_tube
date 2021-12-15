@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".MovieDetails">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.github.abdularis.piv.VerticalScrollParallaxImageView
+                android:id="@+id/imgBanner"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/imgPlayTrailer"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_play_arrow_yallow_24dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/circle_trailer_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+            <ImageView
+                android:id="@+id/imgShare"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_watch_image"
+                android:src="@drawable/ic_share_black_24dp"
+                android:layout_margin="12dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/gradient_banner_image"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-100dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imgPoster"
+                android:scaleType="centerCrop"
+                android:layout_width="140dp"
+                android:layout_height="190dp"
+                android:src="#41E8B30D"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp">
+
+                <TextView
+                    android:id="@+id/txtName"
+                    android:text="Movie Name"
+                    android:textColor="@android:color/white"
+                    android:textSize="28sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="70sp"/>
+
+                <RatingBar
+                    android:id="@+id/ratingMovie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:max="5"
+                    android:rating="0"
+                    android:scaleX="0.6"
+                    android:scaleY="0.6"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/txtName"
+                    android:layout_centerHorizontal="true"/>
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp">
+
+                <ImageView
+                    android:id="@+id/imgLike"
+                    android:background="@drawable/circle_like_image"
+                    android:src="@drawable/ic_like_white_24dp"
+                    android:scaleType="centerCrop"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <TextView
+                    android:id="@+id/txtCountLikesss"
+                    android:text="Likes"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp">
+
+                <ImageView
+                    android:id="@+id/imgDisLike"
+                    android:background="@drawable/circle_like_image"
+                    android:src="@drawable/ic_dislike_white_24dp"
+                    android:scaleType="centerCrop"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <TextView
+                    android:id="@+id/txtCountDisLikes"
+                    android:text="Dislikes"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp">
+
+                <ImageView
+                    android:id="@+id/imgFav"
+                    android:background="@drawable/circle_like_image"
+                    android:src="@drawable/ic_favorite_border_white_24dp"
+                    android:scaleType="centerCrop"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
+
+                <TextView
+                    android:id="@+id/txtFav"
+                    android:text="Fav"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgWatch"
+                    android:background="@drawable/circle_watch_image"
+                    android:src="@drawable/ic_movie_filter_black_24dp"
+                    android:scaleType="centerCrop"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"/>
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_margin="16dp"
+            android:text="Text Description Text Description Text Description Text Description Text Description Text Description Text Description"
+            android:textColor="#91FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!--Photos Section-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_sections_movie">
+
+            <TextView
+                android:text="Photos"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPhotos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+
+        <!--Ratings Section-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_sections_movie">
+
+            <TextView
+                android:text="Ratings"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="12dp">
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/imgRating"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_like_image"
+                    android:src="@drawable/ic_star_white_24dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Entertainment"
+                android:textSize="22sp"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"/>
+
+            <RatingBar
+                android:id="@+id/ratingEntertainment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:max="5"
+                android:rating="0"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="12dp"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Performing artists"
+                android:textSize="22sp"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"/>
+
+            <RatingBar
+                android:id="@+id/ratingPerformingArtists"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:max="5"
+                android:rating="0"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="12dp"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Resolution"
+                android:textSize="22sp"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"/>
+
+            <RatingBar
+                android:id="@+id/ratingResolution"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:max="5"
+                android:rating="0"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="12dp"/>
+
+        </RelativeLayout>
+
+        <!--ActorsSection-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_sections_movie">
+
+            <TextView
+                android:text="Cast"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerActors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"/>
+
+
+        <!--Comments Section-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/gradient_sections_movie">
+
+            <TextView
+                android:text="Comments"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="12dp">
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/imgComment"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_like_image"
+                    android:src="@drawable/ic_mode_comment_white_24dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    />
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerComments"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+
+
+</ScrollView>

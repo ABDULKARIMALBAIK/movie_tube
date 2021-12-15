@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backround"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerInParent="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <io.supercharge.shimmerlayout.ShimmerLayout
+                    android:id="@+id/shimmerLayout"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    app:shimmer_animation_duration="1200">
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="350dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="MovieTube"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="70sp"
+                        />
+
+                </io.supercharge.shimmerlayout.ShimmerLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <believe.cht.fadeintextview.TextView
+                    android:id="@+id/txtslogan"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/slogan"
+                    android:textSize="24sp"
+                    android:textColor="#ffffff"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="30dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
